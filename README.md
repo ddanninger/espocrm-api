@@ -15,7 +15,7 @@ Add espocrm-api in your composer.json:
 ```js
 {
     "require": {
-        "drei-kr/espocrm-api": "1.0-dev"
+        "drei-kr/espocrm-api": "dev-master"
     }
 }
 ```
