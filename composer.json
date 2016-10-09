@@ -4,7 +4,11 @@
   "license": "MIT",
   "keywords": [
     "espocrm",
-    "restful api"
+    "crm rest api",
+	"espocrm api",
+	"php crm api",
+	"pluscrm",
+	"opensource crm api"
   ],
   "homepage": "https://github.com/ddanninger/espocrm-api",
   "type": "library",
