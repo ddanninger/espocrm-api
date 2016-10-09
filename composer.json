@@ -1,5 +1,5 @@
 {
-  "name": "ddanninger/espocrm-api",
+  "name": "drei-kr/espocrm-api",
   "description": "PHP API for EspoCRM",
   "license": "MIT",
   "keywords": [
@@ -10,7 +10,7 @@
 	"pluscrm",
 	"opensource crm api"
   ],
-  "homepage": "https://github.com/ddanninger/espocrm-api",
+  "homepage": "https://github.com/drei-kr/espocrm-api",
   "type": "library",
   "authors": [
     {
@@ -23,13 +23,13 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/ddanninger/espocrm-api"
+      "url": "https://github.com/drei-kr/espocrm-api"
     }
   ],
   "autoload": {
     "psr-4": {
-        "EspoCRM\\Api\\": "src/",
-        "EspoCRM\\Api\\Tests\\": "tests/"
+        "Drei\\EspoCRM\\": "src/",
+        "Drei\\EspoCRM\\Tests\\": "tests/"
     }
   },
   "require": {

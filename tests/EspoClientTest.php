@@ -1,8 +1,8 @@
 <?php
 
-namespace EspoCRM\Api\Tests;
+namespace Drei\EspoCRM\Tests;
 
-use EspoCRM\Api\Client\EspoClient;
+use Drei\EspoCRM\Client\EspoClient;
 
 class EspoClientTest extends \PHPUnit_Framework_TestCase
 {

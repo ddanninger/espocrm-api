@@ -1,5 +1,5 @@
 <?php
-namespace EspoCRM\Api\Client;
+namespace Drei\EspoCRM\Client;
 
 use GuzzleHttp\Event\BeforeEvent;
 use GuzzleHttp\Event\RequestEvents;

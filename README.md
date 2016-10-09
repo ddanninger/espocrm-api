@@ -2,7 +2,7 @@
 
 ## Installation
 
-The Package is available on Packagist ([ddanninger/espocrm-api](https://packagist.org/packages/ddanninger/espocrm-api))
+The Package is available on Packagist ([drei-kr/espocrm-api](https://packagist.org/packages/drei-kr/espocrm-api))
 and as such installable via [Composer](http://getcomposer.org/).
 
 If you do not use Composer, you can grab the code from GitHub, and use any PSR-4 compatible autoloader
@@ -15,7 +15,7 @@ Add espocrm-api in your composer.json:
 ```js
 {
     "require": {
-        "ddanninger/espocrm-api": "dev-master"
+        "drei-kr/espocrm-api": "dev-master"
     }
 }
 ```
@@ -23,7 +23,7 @@ Add espocrm-api in your composer.json:
 Download the library:
 
 ``` bash
-$ php composer.phar update ddanninger/espocrm-api
+$ php composer.phar update drei-kr/espocrm-api
 ```
 
 After installing, you need to require Composer's autoloader somewhere in your code:
@@ -35,7 +35,7 @@ require_once 'vendor/autoload.php';
 ## Usage
 
 ```php
-use EspoCRM\Api\Client\EspoClient;
+use Drei\EspoCRM\Client\EspoClient;
 
 $client = EspoClient::factory([
     'url'     => 'http://plus.dev/',     // required
@@ -53,4 +53,4 @@ $results = (array) $client->execute($command); // returns an array of results
 ```
 
 You can find a list of the client's available commands in the bundle's
-[client.json](https://github.com/ddanninger/espocrm-api/blob/master/src/Resources/config/v1/client.json) or take a look into the api docu of espocrm https://github.com/espocrm/documentation/blob/master/development/api.md.
+[client.json](https://github.com/drei-kr/espocrm-api/blob/master/src/Resources/config/v1/client.json) or take a look into the api docu of espocrm https://github.com/espocrm/documentation/blob/master/development/api.md.

@@ -1,8 +1,8 @@
 <?php
 
-namespace EspoCRM\Api\Client;
+namespace Drei\EspoCRM\Client;
 
-use EspoCRM\Api\Client\Authorization;
+use Drei\EspoCRM\Client\Authorization;
 
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
