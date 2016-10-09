@@ -40,6 +40,376 @@
             },
             "uri": "{entityType}",
             "responseModel": "getResponse"
+        },
+        "read": {
+            "description": "Read single entity",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/{id}",
+            "responseModel": "getResponse"
+        },
+        "create": {
+            "description": "Create entity",
+            "httpMethod": "POST",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}",
+            "responseModel": "getResponse"
+        },
+        "delete": {
+            "description": "Delete single entity",
+            "httpMethod": "DELETE",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/{id}",
+            "responseModel": "getResponse"
+        },
+        "links": {
+            "description": "List Related Entities",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                },
+                "link": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "offset": {
+                    "description": "(int) offset",
+                    "location": "query"
+                },
+                "maxSize": {
+                    "description": "(int) max size",
+                    "location": "query"
+                },
+                "where": {
+                    "description": "(array) filters",
+                    "location": "query"
+                },
+                "sortBy": {
+                    "description": "(string) field to sort by",
+                    "location": "query"
+                },
+                "asc": {
+                    "description": "(bool) sort direction.",
+                    "location": "query"
+                }
+            },
+            "uri": "{entityType}/{id}/{link}",
+            "responseModel": "getResponse"
+        },
+        "link": {
+            "description": "Link entity",
+            "httpMethod": "POST",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                },
+                "link": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "ids": {
+                    "description": "Array attribute",
+                    "location": "postField",
+                    "required": true
+                },
+                "massRelate": {
+                    "description": "massRelate: true and where: {...} to relate multiple records by search criterias.",
+                    "location": "postField"
+                },
+                "where": {
+                    "description": "massRelate: true and where: {...} to relate multiple records by search criterias.",
+                    "location": "postField"
+                }
+            },
+            "uri": "{entityType}/{id}/{link}",
+            "responseModel": "getResponse"
+        },
+        "unlink": {
+            "description": "Unlink entity",
+            "httpMethod": "DELETE",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                },
+                "link": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "ids": {
+                    "description": "Array attribute",
+                    "location": "postField",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/{id}/{link}",
+            "responseModel": "getResponse"
+        },
+        "stream": {
+            "description": "List stream entries for the current user",
+            "httpMethod": "GET",
+            "parameters": {
+            },
+            "uri": "Stream",
+            "responseModel": "getResponse"
+        },
+        "entity/stream": {
+            "description": "List stream entries related to a specific record",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/{id}/stream",
+            "responseModel": "getResponse"
+        },
+        "follow": {
+            "description": "Follow entity",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/{id}/subscription",
+            "responseModel": "getResponse"
+        },
+        "unfollow": {
+            "description": "Unfollow entity",
+            "httpMethod": "DELETE",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/{id}/subscription",
+            "responseModel": "getResponse"
+        },
+        "action/list": {
+            "description": "List entity action lists",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "action": {
+                    "description": "Action e.g listUpcoming",
+                    "location": "uri",
+                    "required": true
+                },
+                "offset": {
+                    "description": "(int) offset",
+                    "location": "query"
+                },
+                "maxSize": {
+                    "description": "(int) max size",
+                    "location": "query"
+                },
+                "where": {
+                    "description": "(array) filters",
+                    "location": "query"
+                },
+                "sortBy": {
+                    "description": "(string) field to sort by",
+                    "location": "query"
+                },
+                "asc": {
+                    "description": "(bool) sort direction.",
+                    "location": "query"
+                }
+            },
+            "uri": "{entityType}/action/{action}",
+            "responseModel": "getResponse"
+        },
+        "activities/list": {
+            "description": "List entity action lists",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "id": {
+                    "description": "id",
+                    "location": "uri",
+                    "required": true
+                },
+                "activity": {
+                    "description": "Activtiy e.g history, activities",
+                    "location": "uri",
+                    "required": true
+                },
+                "offset": {
+                    "description": "(int) offset",
+                    "location": "query"
+                },
+                "maxSize": {
+                    "description": "(int) max size",
+                    "location": "query"
+                },
+                "where": {
+                    "description": "(array) filters",
+                    "location": "query"
+                },
+                "sortBy": {
+                    "description": "(string) field to sort by",
+                    "location": "query"
+                },
+                "asc": {
+                    "description": "(bool) sort direction.",
+                    "location": "query"
+                }
+            },
+            "uri": "Activities/{entityType}/{id}/{activity}",
+            "responseModel": "getResponse"
+        },
+        "activities": {
+            "description": "List entity",
+            "httpMethod": "GET",
+            "parameters": {
+                "from": {
+                    "description": "(date) from 2016-10-09 00:00",
+                    "location": "query"
+                },
+                "to": {
+                    "description": "(date) to 2016-10-10 00:00",
+                    "location": "query"
+                },
+                "scopeList": {
+                    "description": "scopes comma seperated (Meeting,Call,Task)",
+                    "location": "query"
+                }
+            },
+            "uri": "Activities",
+            "responseModel": "getResponse"
+        },
+        "app/user": {
+            "description": "User data",
+            "httpMethod": "GET",
+            "parameters": {
+            },
+            "uri": "App/user",
+            "responseModel": "getResponse"
+        },
+        "layout": {
+            "description": "List entity layouts",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "type": {
+                    "description": "Layout type e.g filters,list,listSmall ....",
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "uri": "{entityType}/layout/{type}",
+            "responseModel": "getResponse"
+        },
+        "metadata": {
+            "description": "Metadata",
+            "httpMethod": "GET",
+            "parameters": {
+            },
+            "uri": "Metadata",
+            "responseModel": "getResponse"
+        },
+        "l18n": {
+            "description": "Translation - I18n",
+            "httpMethod": "GET",
+            "parameters": {
+            },
+            "uri": "I18n",
+            "responseModel": "getResponse"
+        },
+        "settings": {
+            "description": "Settings",
+            "httpMethod": "GET",
+            "parameters": {
+            },
+            "uri": "Settings",
+            "responseModel": "getResponse"
         }
+        
     }
 }
