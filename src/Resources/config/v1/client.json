@@ -1,0 +1,45 @@
+{
+    "models": {
+        "getResponse": {
+            "type": "object",
+            "additionalProperties": {
+                "location": "json"
+            }
+        }
+    },
+    "operations": {
+        "list": {
+            "description": "List entity",
+            "httpMethod": "GET",
+            "parameters": {
+                "entityType": {
+                    "description": "Entity e.g Account,Contact,Lead,....",
+                    "location": "uri",
+                    "required": true
+                },
+                "offset": {
+                    "description": "(int) offset",
+                    "location": "query"
+                },
+                "maxSize": {
+                    "description": "(int) max size",
+                    "location": "query"
+                },
+                "where": {
+                    "description": "(array) filters",
+                    "location": "query"
+                },
+                "sortBy": {
+                    "description": "(string) field to sort by",
+                    "location": "query"
+                },
+                "asc": {
+                    "description": "(bool) sort direction.",
+                    "location": "query"
+                }
+            },
+            "uri": "{entityType}",
+            "responseModel": "getResponse"
+        }
+    }
+}
