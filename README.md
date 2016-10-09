@@ -53,4 +53,4 @@ $results = (array) $client->execute($command); // returns an array of results
 ```
 
 You can find a list of the client's available commands in the bundle's
-[client.json] or references to https://github.com/espocrm/documentation/blob/master/development/api.md.
+[client.json](https://github.com/ddanninger/espocrm-api/blob/master/src/Resources/config/v1/client.json) or take a look into the api docu of espocrm https://github.com/espocrm/documentation/blob/master/development/api.md.
