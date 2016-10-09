@@ -1,0 +1,29 @@
+{
+  "name": "ddanninger/espocrm-api",
+  "description": "PHP API for EspoCRM",
+  "license": "MIT",
+  "keywords": [
+    "espocrm",
+    "restful api"
+  ],
+  "homepage": "https://github.com/ddanninger/espocrm-api",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Dominik Danninger",
+      "email": "ddanninger@gmail.com",
+      "homepage": "http://drei.kr"
+    }
+  ],
+  "minimum-stability": "stable",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ddanninger/espocrm-api"
+    }
+  ],
+  "autoload": {
+    "files": [
+    ]
+  }
+}
