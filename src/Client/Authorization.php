@@ -22,7 +22,7 @@ class Authorization implements SubscriberInterface {
 
     public function sign(BeforeEvent $e) {
         if ($e->getRequest()->getConfig()['auth'] == 'espo') {
-            $e->getRequest()->setHeader('Espo-Authorization', base64_encode($this->username . ':' . $this->password));
+            $e->getRequest()->setHeader('Espo-Authorization', base64_encode($this->username . ':' . $this->token));
         }
     }
 }

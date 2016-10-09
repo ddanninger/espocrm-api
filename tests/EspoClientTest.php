@@ -75,7 +75,7 @@ class EspoClientTest extends \PHPUnit_Framework_TestCase
     public function provideConfigValues()
     {
         return [
-            ['http://plus.dev/', 'admin', 'aClientSecret']
+            ['http://plus.dev/', 'admin', 'admin']
         ];
     }
 }
